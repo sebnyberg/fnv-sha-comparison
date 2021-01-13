@@ -10,6 +10,7 @@ import (
 	"hash/fnv"
 	"io"
 	"log"
+	"math"
 	"math/rand"
 	"os"
 	"text/tabwriter"
@@ -229,4 +230,8 @@ func testHash(keys []string, h Hasher, maxlen int) (ncollisions int) {
 		h.Reset()
 	}
 	return ncollisions
+}
+
+func calcP(nhashes float64, nbits int) float64 {
+	return math.Pow(nhashes, 2) / (2 * float64(math.Pow(2, float64(nbits))))
 }
