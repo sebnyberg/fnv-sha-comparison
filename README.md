@@ -48,7 +48,7 @@ The expected collision resistance of a perfectly random hash can be derived math
 
 This is what we expect to see from the practical collision test.
 
-MurmurHash3 was excluded from the tests because it does not map to the same outputs on different CPU architectures. In my view, this makes neighbouring hashes more competitive (FNV-1 or xxhash).
+MurmurHash3 was excluded from the tests because it does not map to the same outputs on different CPU architectures. In my view, this makes alternative hashing methodologies more attractive (FNV-1 or xxhash).
 
 The two datasets used for testing were:
 
