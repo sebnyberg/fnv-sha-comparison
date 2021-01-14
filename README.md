@@ -32,19 +32,19 @@ BenchmarkHash/sha3-512-6                 1753620               684 ns/op
 
 The expected collision resistance of a perfectly random hash can be derived mathematically (see [this article](https://www.ilikebigbits.com/2018_10_20_estimating_hash_collisions.html#:~:text=Whatever%20the%20usage%20you%20should,service%20attacks%2C%20spoofing%20and%20worse.))
 
-| Hash space (H) | # elements (n) | Expected number of collisions (P) |
-| -------------- | -------------- | --------------------------------- |
-| 32bit (2^32)   | 10K            | 0.0116                            |
-| 32bit (2^32)   | 100K           | 1.16                              |
-| 32bit (2^32)   | 1M             | 116.41                            |
-| 32bit (2^32)   | 10M            | 11641.53                          |
-| 64bit (2^64)   | 100M           | 0                                 |
-| 64bit (2^64)   | 1B             | 0.03                              |
-| 64bit (2^64)   | 10B            | 2.71                              |
-| 128bit (2^128) | 1e17           | 0                                 |
-| 128bit (2^128) | 1e18           | 0.001469                          |
-| 128bit (2^128) | 1e19           | 0.1469                            |
-| 128bit (2^128) | 1e20           | 14.69                             |
+| Hash space (H) | # unique elements (n) | Expected number of collisions (P) |
+| -------------- | --------------------- | --------------------------------- |
+| 32bit (2^32)   | 10K                   | 0.0116                            |
+| 32bit (2^32)   | 100K                  | 1.16                              |
+| 32bit (2^32)   | 1M                    | 116.41                            |
+| 32bit (2^32)   | 10M                   | 11641.53                          |
+| 64bit (2^64)   | 100M                  | 0                                 |
+| 64bit (2^64)   | 1B                    | 0.03                              |
+| 64bit (2^64)   | 10B                   | 2.71                              |
+| 128bit (2^128) | 1e17                  | 0                                 |
+| 128bit (2^128) | 1e18                  | 0.001469                          |
+| 128bit (2^128) | 1e19                  | 0.1469                            |
+| 128bit (2^128) | 1e20                  | 14.69                             |
 
 This is what we expect to see from the practical collision test.
 
